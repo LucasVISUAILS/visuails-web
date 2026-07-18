@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VISUAILS — AI product visuals that sell</title>
+<meta name="description" content="VISUAILS turns a single product photo into studio-quality catalog, lifestyle and video visuals — in about 24 hours, 10x cheaper than a traditional shoot, every result human-reviewed.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e1a'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='%235aa2ff' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="atmos" aria-hidden="true"></div>
+
+<!-- ===== SVG SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gObj" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3ff"/><stop offset="0.5" stop-color="#a9c2ee"/><stop offset="1" stop-color="#5f7bb0"/>
+    </linearGradient>
+    <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfeaff" stop-opacity="0.95"/><stop offset="1" stop-color="#7d97c9" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <symbol id="p-bottle" viewBox="0 0 120 150">
+    <rect x="50" y="8" width="20" height="16" rx="3" fill="url(#gObj)"/>
+    <rect x="46" y="22" width="28" height="10" rx="2" fill="#c7d6f0"/>
+    <path d="M42 34 h36 a10 10 0 0 1 10 10 v82 a12 12 0 0 1 -12 12 h-32 a12 12 0 0 1 -12 -12 v-82 a10 10 0 0 1 10 -10 z" fill="url(#gGlass)"/>
+    <rect x="46" y="70" width="28" height="46" rx="6" fill="#ffffff" opacity="0.18"/>
+    <rect x="50" y="46" width="7" height="70" rx="3" fill="#ffffff" opacity="0.5"/>
+  </symbol>
+  <symbol id="p-sneaker" viewBox="0 0 160 110">
+    <path d="M14 78 q0 -30 26 -34 q10 -2 20 6 l26 20 q16 4 46 8 q14 2 14 14 v6 q0 6 -8 6 H20 q-8 0 -8 -8 z" fill="url(#gGlass)"/>
+    <path d="M40 46 q10 -4 20 4 l24 18" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M14 92 h132 q0 10 -10 10 H22 q-8 0 -8 -10z" fill="#c7d6f0"/>
+    <circle cx="52" cy="60" r="3" fill="#fff" opacity="0.7"/><circle cx="66" cy="68" r="3" fill="#fff" opacity="0.7"/>
+  </symbol>
+  <symbol id="p-jar" viewBox="0 0 120 130">
+    <ellipse cx="60" cy="30" rx="34" ry="12" fill="#c7d6f0"/>
+    <rect x="26" y="30" width="68" height="16" fill="#c7d6f0"/>
+    <path d="M22 52 h76 v40 a20 20 0 0 1 -20 20 h-36 a20 20 0 0 1 -20 -20 z" fill="url(#gGlass)"/>
+    <ellipse cx="60" cy="52" rx="38" ry="12" fill="url(#gObj)"/>
+    <ellipse cx="60" cy="50" rx="24" ry="7" fill="#fff" opacity="0.35"/>
+  </symbol>
+  <symbol id="p-bag" viewBox="0 0 120 130">
+    <path d="M40 40 a20 20 0 0 1 40 0" fill="none" stroke="url(#gObj)" stroke-width="6"/>
+    <path d="M26 44 h68 l8 74 a6 6 0 0 1 -6 7 H24 a6 6 0 0 1 -6 -7 z" fill="url(#gGlass)"/>
+    <rect x="26" y="44" width="68" height="8" fill="#ffffff" opacity="0.25"/>
+    <circle cx="60" cy="82" r="7" fill="#fff" opacity="0.4"/>
+  </symbol>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="VISUAILS home">VIS<span class="u">U</span>AILS</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li class="has-menu">
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Services
+            <svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-menu" role="menu">
+            <a href="catalog.html" role="menuitem"><span class="mi-title">Catalog</span><span class="mi-desc">Clean, consistent product shots — from €19</span></a>
+            <a href="lifestyle.html" role="menuitem"><span class="mi-title">Lifestyle</span><span class="mi-desc">Styled scenes & models — from €35</span></a>
+            <a href="video.html" role="menuitem"><span class="mi-title">Video</span><span class="mi-desc">Short product videos that move</span></a>
+            <a href="models.html" role="menuitem"><span class="mi-title">Models</span><span class="mi-desc">Consistent faces across every visual</span></a>
+          </div>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="test-sample.html">Test Sample</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="order.html" class="btn btn-primary">Order now</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="mobileNav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="catalog.html">Catalog</a>
+  <a href="lifestyle.html">Lifestyle</a>
+  <a href="video.html">Video</a>
+  <a href="models.html">Models</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="test-sample.html">Test Sample</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.8rem">
+    <a href="order.html" class="btn btn-primary btn-block">Order now</a>
+    <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27d%20like%20to%20order%20some%20visuals." class="btn btn-wa btn-block" target="_blank" rel="noopener">Order via WhatsApp</a>
+  </div>
+</div>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal in">
+      <span class="pill-note">AI speed. Human control. Better results.</span>
+      <h1 class="display" style="margin:1.1rem 0 0">Stunning product visuals in <span class="accent-word">48 hours</span>.</h1>
+      <p class="lead" style="margin-top:1.3rem">Your products deserve better than generic studio shots. VISUAILS turns a single photo into studio-quality, on-brand visuals that convert — faster and 10&times; cheaper than a traditional shoot.</p>
+      <div class="flex" style="margin-top:2rem">
+        <a href="order.html" class="btn btn-primary btn-lg">Order now</a>
+        <a href="test-sample.html" class="btn btn-ghost btn-lg">Free test sample</a>
+        <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27m%20interested%20in%20your%20visuals." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          WhatsApp <span class="rec-badge">Fastest</span>
+        </a>
+      </div>
+      <div class="trust-row" style="margin-top:2.4rem">
+        <span class="trust-item"><strong>10&times;</strong> cheaper than studio shoots</span>
+        <span class="trust-item"><strong>24–48h</strong> delivery</span>
+        <span class="trust-item"><strong>100%</strong> human-reviewed</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal in" data-delay="1">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="ba" aria-label="Before and after: a raw product photo transformed into a VISUAILS visual">
+        <div class="ba-layer vis ba-before-scene ba-before" style="--vh:250" aria-hidden="true">
+          <div class="vis-glow"></div><div class="vis-obj"><svg viewBox="0 0 160 110"><use href="#p-sneaker"/></svg></div><div class="vis-floor"></div>
+        </div>
+        <div class="ba-layer vis ba-after" style="--vh:255" aria-hidden="true">
+          <div class="vis-glow"></div><div class="vis-obj"><svg viewBox="0 0 160 110"><use href="#p-sneaker"/></svg></div><div class="vis-floor"></div>
+        </div>
+        <span class="ba-tag tag-before">Before</span>
+        <span class="ba-tag tag-after">After</span>
+        <div class="ba-handle" aria-hidden="true"></div>
+        <div class="ba-knob" aria-hidden="true">
+          <svg class="i" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg>
+        </div>
+      </div>
+      <div class="float-tag" style="top:14px;left:-10px">
+        <svg viewBox="0 0 24 24" class="i"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>
+        One photo in
+      </div>
+      <div class="float-tag" style="bottom:16px;right:-10px">
+        <svg viewBox="0 0 24 24" class="i"><path d="M20 6L9 17l-5-5"/></svg>
+        Ready to publish
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM / SOLUTION ===== -->
+<section class="section-tight">
+  <div class="container two-col">
+    <div class="reveal">
+      <span class="kicker">The old way</span>
+      <h2 style="margin-top:1rem">Studio shoots are slow, costly, and hard to keep consistent.</h2>
+      <ul class="stack-sm measure" style="margin-top:1.4rem;color:var(--ink-3)">
+        <li>&mdash; €500–€3,000+ per shoot, before you've sold a thing.</li>
+        <li>&mdash; Weeks of scheduling: studio, photographer, models, editing.</li>
+        <li>&mdash; New product? Start the whole circus over again.</li>
+        <li>&mdash; Raw AI tools give you inconsistent, off-brand, unusable results.</li>
+      </ul>
+    </div>
+    <div class="reveal card" data-delay="1" style="border-color:var(--accent-line)">
+      <span class="kicker" style="color:var(--accent-bright)">The VISUAILS way</span>
+      <h2 style="margin-top:1rem">One photo in. Publish-ready visuals out.</h2>
+      <ul class="checklist" style="margin-top:1.4rem">
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span><strong>From €19 per visual</strong> — pay per image, no subscription.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span><strong>~24-hour delivery</strong>, consistent and on-brand every time.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Human-reviewed</strong> before anything reaches you.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Scale instantly</strong> — 5 or 500 visuals, same short wait.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Three steps. That's the whole process.</h2>
+      <p>You only need a product photo or screenshot to get started. We handle the rest.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-n">01</div><h3>Upload &amp; brief</h3><p>Share a product photo and a short note on the look you want. Takes about five minutes.</p></div>
+      <div class="step reveal" data-delay="1"><div class="step-n">02</div><h3>We generate &amp; review</h3><p>Our pipeline creates your visuals, then a real person quality-checks every single one.</p></div>
+      <div class="step reveal" data-delay="2"><div class="step-n">03</div><h3>Download &amp; use</h3><p>Get high-resolution, e-commerce-ready files by download link — usually within 24 hours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Three services</span>
+      <h2 style="margin-top:0.8rem">Everything your product needs to look its best.</h2>
+    </div>
+    <div class="grid grid-3">
+      <a href="catalog.html" class="card card-hover svc reveal">
+        <div class="svc-media vis wide" style="--vh:245"><div class="vis-glow"></div><div class="vis-obj" style="width:44%"><svg viewBox="0 0 120 150"><use href="#p-bottle"/></svg></div><div class="vis-floor"></div></div>
+        <div class="svc-body">
+          <h3>Catalog</h3>
+          <span class="svc-price">From €19 / visual</span>
+          <p>Clean, consistent product images with the same lighting, angle and background every time — built for webshops, marketplaces and ads.</p>
+          <span class="link-arrow">Explore catalog <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="lifestyle.html" class="card card-hover svc reveal" data-delay="1">
+        <div class="svc-media vis wide" style="--vh:290"><div class="vis-glow"></div><div class="vis-obj" style="width:46%"><svg viewBox="0 0 120 130"><use href="#p-jar"/></svg></div><div class="vis-floor"></div></div>
+        <div class="svc-body">
+          <h3>Lifestyle</h3>
+          <span class="svc-price">From €35 / visual</span>
+          <p>Your product in styled, real-world scenes with natural light — and optional consistent models that carry across a whole collection.</p>
+          <span class="link-arrow">Explore lifestyle <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="video.html" class="card card-hover svc reveal" data-delay="2">
+        <div class="svc-media vis wide" style="--vh:210"><div class="vis-glow"></div><div class="vis-obj" style="width:52%"><svg viewBox="0 0 160 110"><use href="#p-sneaker"/></svg></div><div class="vis-floor"></div></div>
+        <div class="svc-body">
+          <h3>Video</h3>
+          <span class="svc-price">Custom pricing</span>
+          <p>Short, clean product videos with subtle motion — made for product pages, social feeds and simple ads that stop the scroll.</p>
+          <span class="link-arrow">Explore video <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY / VALUE ===== -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <h2>Why brands choose VISUAILS</h2>
+      <p>No inflated numbers — just the value you can count on from the first order.</p>
+    </div>
+    <div class="stat-row reveal">
+      <div class="stat"><div class="num"><span data-count="10">10</span>&times;</div><div class="lbl">Cheaper than a traditional studio shoot</div></div>
+      <div class="stat"><div class="num">~<span data-count="24">24</span>h</div><div class="lbl">Typical delivery, from brief to download</div></div>
+      <div class="stat"><div class="num"><span data-count="100">100</span>%</div><div class="lbl">Human-reviewed before every delivery</div></div>
+      <div class="stat"><div class="num"><span data-count="3">3</span></div><div class="lbl">Revision rounds included as standard</div></div>
+    </div>
+    <div class="grid grid-auto reveal" style="margin-top:1.5rem" data-delay="1">
+      <div class="card"><h4>Results-focused</h4><p style="margin-top:.5rem;font-size:.95rem">Every visual is built for conversion, not just to look pretty in a portfolio.</p></div>
+      <div class="card"><h4>Consistent &amp; on-brand</h4><p style="margin-top:.5rem;font-size:.95rem">Same lighting, framing and style across your whole range — order after order.</p></div>
+      <div class="card"><h4>You stay in control</h4><p style="margin-top:.5rem;font-size:.95rem">Revision rounds included. Your feedback shapes the final result.</p></div>
+      <div class="card"><h4>Refined by people</h4><p style="margin-top:.5rem;font-size:.95rem">AI isn't perfect — so a human checks every visual before it reaches you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOWCASE MARQUEE ===== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:1.8rem">
+      <h2>A look at the styles</h2>
+      <p>A feel for the range — from clean catalog to editorial lifestyle. <a href="gallery.html" class="link-arrow" style="font-size:1rem">See the full gallery <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="marquee-item vis" style="--vh:245"><div class="vis-glow"></div><div class="vis-obj" style="width:40%"><svg viewBox="0 0 120 150"><use href="#p-bottle"/></svg></div><div class="vis-floor"></div><span class="vis-badge">Catalog · Classic</span></div>
+      <div class="marquee-item vis" style="--vh:295"><div class="vis-glow"></div><div class="vis-obj" style="width:46%"><svg viewBox="0 0 120 130"><use href="#p-jar"/></svg></div><div class="vis-floor"></div><span class="vis-badge">Lifestyle · Glow</span></div>
+      <div class="marquee-item vis" style="--vh:210"><div class="vis-glow"></div><div class="vis-obj" style="width:56%"><svg viewBox="0 0 160 110"><use href="#p-sneaker"/></svg></div><div class="vis-floor"></div><span class="vis-badge">Lifestyle · Flash</span></div>
+      <div class="marquee-item vis" style="--vh:330"><div class="vis-glow"></div><div class="vis-obj" style="width:46%"><svg viewBox="0 0 120 130"><use href="#p-bag"/></svg></div><div class="vis-floor"></div><span class="vis-badge">Catalog · Custom</span></div>
+      <div class="marquee-item vis" style="--vh:265"><div class="vis-glow"></div><div class="vis-obj" style="width:42%"><svg viewBox="0 0 120 150"><use href="#p-bottle"/></svg></div><div class="vis-floor"></div><span class="vis-badge">Lifestyle · Phone-made</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUALITY ===== -->
+<section>
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="vis wide" style="--vh:270;border-radius:var(--r-lg)">
+        <div class="vis-glow"></div>
+        <div class="vis-obj" style="width:40%"><svg viewBox="0 0 120 150"><use href="#p-bottle"/></svg></div>
+        <div class="vis-floor"></div>
+        <span class="vis-badge">Quality-checked by a human</span>
+      </div>
+    </div>
+    <div class="reveal" data-delay="1">
+      <span class="kicker" style="color:var(--accent-bright)">Refined to perfection</span>
+      <h2 style="margin-top:1rem">AI isn't perfect. We make sure the final result is.</h2>
+      <p class="lead" style="margin-top:1.2rem">Unlike raw AI tools, VISUAILS delivers consistent, quality-checked visuals every time. Every image is generated, selected, and manually reviewed by a person before it reaches you — so what you publish looks like your brand already made it big.</p>
+      <div class="chip-row" style="margin-top:1.6rem">
+        <span class="chip"><span class="dot"></span>Consistent lighting &amp; framing</span>
+        <span class="chip"><span class="dot"></span>High-resolution export</span>
+        <span class="chip"><span class="dot"></span>Marketplace-ready</span>
+        <span class="chip"><span class="dot"></span>Revisions included</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUE / SAVINGS ===== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="card reveal" style="padding:clamp(1.6rem,3vw,2.6rem)">
+      <div class="two-col" style="align-items:center">
+        <div>
+          <h2>The maths is simple.</h2>
+          <p class="measure" style="margin-top:1rem">A single traditional shoot runs €500–€3,000+ and takes weeks. With VISUAILS, the same set of visuals starts at €19 each and lands in about a day. Order five, order five hundred — the wait barely changes.</p>
+          <div class="flex" style="margin-top:1.6rem">
+            <a href="pricing.html" class="btn btn-primary">See transparent pricing</a>
+            <a href="test-sample.html" class="link-arrow">Try one free first <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="stat-row" style="grid-template-columns:1fr 1fr">
+          <div class="stat"><div class="num">€19</div><div class="lbl">Starting price per catalog visual</div></div>
+          <div class="stat"><div class="num">€0</div><div class="lbl">Subscriptions or hidden fees</div></div>
+          <div class="stat"><div class="num">~24h</div><div class="lbl">From brief to finished files</div></div>
+          <div class="stat"><div class="num">1</div><div class="lbl">Free test sample per business</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem)">Ready to see your product<br>look its absolute best?</h2>
+      <p class="lead" style="margin:1.2rem auto 0;text-align:center">Start with a free test sample, or place your first order today. Prefer to talk it through? We usually reply on WhatsApp within the hour.</p>
+      <div class="flex" style="justify-content:center;margin-top:2rem">
+        <a href="test-sample.html" class="btn btn-primary btn-lg">Free test sample &mdash; no card needed</a>
+        <a href="order.html" class="btn btn-ghost btn-lg">Order now</a>
+        <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27d%20like%20to%20talk%20about%20visuals%20for%20my%20brand." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">VIS<span class="u">U</span>AILS</a>
+        <p>AI speed. Human control. Better results. Studio-quality product visuals for brands that would rather grow than book another shoot.</p>
+        <a href="https://wa.me/31625436130" class="btn btn-wa" style="margin-top:1.2rem" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:hello@visuails.com">hello@visuails.com</a></li>
+          <li><a href="https://wa.me/31625436130" target="_blank" rel="noopener">+31 6 25436130</a></li>
+          <li class="muted" style="color:var(--ink-3)">Enschede, Netherlands</li>
+          <li class="muted" style="color:var(--ink-3)">Mon–Fri 08:00–20:00 CET<br>Sat–Sun 09:00–20:00 CET</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> VISUAILS · KVK 99742993 · VAT NL005407575B96</span>
+      <span style="display:flex;gap:1.2rem;flex-wrap:wrap">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
