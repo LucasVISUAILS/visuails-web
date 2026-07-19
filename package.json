@@ -1,0 +1,11 @@
+{
+  "name": "visuails-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VISUAILS marketing site (static HTML)",
+  "scripts": {
+    "dev": "bun live.mjs",
+    "start": "bun live.mjs"
+  }
+}
