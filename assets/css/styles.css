@@ -190,6 +190,9 @@ strong { color: var(--ink); font-weight: 600; }
 .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .chip { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.4rem 0.9rem; border-radius: var(--r-pill); border: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-2); }
 .chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+a.chip { transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease); }
+a.chip:hover { border-color: var(--accent-line); color: var(--ink); }
+.sw-custom { background: conic-gradient(from 180deg, #FF5B2E, #FFD25C, #4F8CFF, #33CC99, #FF6B8A, #FF5B2E); }
 .pill-note { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem 1rem; border-radius: var(--r-pill); border: 1px solid var(--line); color: var(--ink-3); font-size: .82rem; font-weight: 500; }
 .pill-note b, .pill-note strong { color: var(--ink-2); }
 .eyebrow-page { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink-3); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.2rem; }
@@ -286,6 +289,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 /* Forms — dark studio */
 .field { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.1rem; }
+.field[hidden] { display: none; }
 .field label { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
 .field .req { color: var(--accent-bright); }
 .field .hint { font-size: 0.8rem; color: var(--ink-3); }
@@ -382,6 +386,11 @@ html.reveal-on .reveal[data-delay="3"] { transition-delay: 0.21s; }
 .roster { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-top: 1.4rem; }
 .roster .face { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line-strong); }
 .roster .face.more { font-family: var(--font-body); font-style: normal; font-size: 0.72rem; color: var(--ink-3); }
+.cm-directions { display: flex; align-items: center; gap: 0.6rem; margin-top: 1.4rem; }
+.cm-face { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 0.9rem; color: var(--ink-3); background: transparent; border: 1.5px dashed var(--line-strong); flex: none; }
+.cm-face.locked { border-style: solid; border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent-bright); }
+.cm-face.photo { border-style: solid; border-color: var(--line-strong); background-size: cover; background-position: center top; }
+.cm-arrow { width: 16px; height: 16px; color: var(--ink-3); flex: none; }
 
 /* Conversion bar — dark glass, quiet */
 .convbar { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%) translateY(160%); z-index: var(--z-bar); display: inline-flex; align-items: center; gap: 12px; padding: 8px 8px 8px 14px; border-radius: var(--r-pill); background: rgba(21,19,17,.88); backdrop-filter: blur(14px); border: 1px solid var(--line-strong); box-shadow: var(--shadow-float); transition: transform 0.55s var(--ease); max-width: calc(100vw - 24px); }

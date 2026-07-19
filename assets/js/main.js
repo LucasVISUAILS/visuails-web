@@ -152,6 +152,34 @@
     });
   }
 
+  /* Background colour choice: Pale white vs Custom colour (hex) */
+  var bgChoices = document.querySelectorAll("[data-bg-choice]");
+  if (bgChoices.length) {
+    var bgHexField = document.getElementById("bgHexField");
+    var bgHexInput = document.getElementById("cat-bg-hex");
+    var bgHexPreview = document.getElementById("bgHexPreview");
+    var bgCustomSwatch = document.getElementById("bgCustomSwatch");
+    function toggleHexField() {
+      var custom = document.querySelector('[data-bg-choice][value="Custom colour"]');
+      var on = custom && custom.checked;
+      if (bgHexField) bgHexField.hidden = !on;
+      if (bgHexInput) bgHexInput.required = !!on;
+    }
+    function applyHex() {
+      if (!bgHexInput) return;
+      var v = bgHexInput.value.trim();
+      if (!v) return;
+      if (v[0] !== "#") v = "#" + v;
+      if (/^#[0-9A-Fa-f]{6}$/.test(v)) {
+        if (bgHexPreview) bgHexPreview.style.background = v;
+        if (bgCustomSwatch) bgCustomSwatch.style.background = v;
+      }
+    }
+    bgChoices.forEach(function (r) { r.addEventListener("change", toggleHexField); });
+    bgHexInput && bgHexInput.addEventListener("input", applyHex);
+    toggleHexField();
+  }
+
   /* Footer year */
   var y = document.querySelector("[data-year]"); if (y) y.textContent = new Date().getFullYear();
 })();

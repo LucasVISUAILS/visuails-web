@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Models — a face exclusively yours | VISUAILS</title>
+<meta name="description" content="Design a custom model exclusively for your brand: a short intake, 2-3 directions, one round of refinement, then locked in and reused in every visual you order.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20120%20120%27%3E%3Crect%20width%3D%27120%27%20height%3D%27120%27%20rx%3D%2726%27%20fill%3D%27%231C140E%27/%3E%3Cg%20transform%3D%27translate%2822.8%2022.0%29%20scale%280.76%29%27%20fill%3D%27%23FF5B2E%27%3E%3Cpath%20d%3D%27M0.0%200.4%2057.2%20100.0%2080.8%2043.0%2063.5%2066.4%2029.2%208.8%2017.5%201.5Z%27/%3E%3Cpath%20d%3D%27M97.9%200.0%2091.2%200.2%2082.7%202.1%2076.2%205.4%2071.6%2010.0%2068.7%2016.5%2068.1%2025.5%2069.3%2033.4%2072.0%2041.1%2076.8%2039.2%2082.7%2035.5%2086.6%2031.7%2090.0%2027.1%2094.2%2016.7Z%27/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* custom-models page — scoped */
+.models-page .monogram{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.9rem;color:#0a0e1a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 8px 22px -12px rgba(0,0,0,.6)}
+.models-page .model-card{display:flex;flex-direction:column;gap:.9rem}
+</style>
+</head>
+<body class="models-page">
+<div class="atmos" aria-hidden="true"></div>
+
+<!-- ===== SVG SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gObj" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7c0d1"/><stop offset="0.5" stop-color="#8591a8"/><stop offset="1" stop-color="#525d75"/>
+    </linearGradient>
+    <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdd5e1" stop-opacity="0.97"/><stop offset="1" stop-color="#7e8aa1" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <symbol id="p-bottle" viewBox="0 0 120 150">
+    <rect x="50" y="8" width="20" height="16" rx="3" fill="url(#gObj)"/>
+    <rect x="46" y="22" width="28" height="10" rx="2" fill="#aeb8ca"/>
+    <path d="M42 34 h36 a10 10 0 0 1 10 10 v82 a12 12 0 0 1 -12 12 h-32 a12 12 0 0 1 -12 -12 v-82 a10 10 0 0 1 10 -10 z" fill="url(#gGlass)"/>
+    <rect x="46" y="70" width="28" height="46" rx="6" fill="#ffffff" opacity="0.18"/>
+    <rect x="50" y="46" width="7" height="70" rx="3" fill="#ffffff" opacity="0.5"/>
+  </symbol>
+  <symbol id="p-sneaker" viewBox="0 0 160 110">
+    <path d="M14 78 q0 -30 26 -34 q10 -2 20 6 l26 20 q16 4 46 8 q14 2 14 14 v6 q0 6 -8 6 H20 q-8 0 -8 -8 z" fill="url(#gGlass)"/>
+    <path d="M40 46 q10 -4 20 4 l24 18" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M14 92 h132 q0 10 -10 10 H22 q-8 0 -8 -10z" fill="#aeb8ca"/>
+    <circle cx="52" cy="60" r="3" fill="#fff" opacity="0.7"/><circle cx="66" cy="68" r="3" fill="#fff" opacity="0.7"/>
+  </symbol>
+  <symbol id="p-jar" viewBox="0 0 120 130">
+    <ellipse cx="60" cy="30" rx="34" ry="12" fill="#aeb8ca"/>
+    <rect x="26" y="30" width="68" height="16" fill="#aeb8ca"/>
+    <path d="M22 52 h76 v40 a20 20 0 0 1 -20 20 h-36 a20 20 0 0 1 -20 -20 z" fill="url(#gGlass)"/>
+    <ellipse cx="60" cy="52" rx="38" ry="12" fill="url(#gObj)"/>
+    <ellipse cx="60" cy="50" rx="24" ry="7" fill="#fff" opacity="0.35"/>
+  </symbol>
+  <symbol id="p-bag" viewBox="0 0 120 130">
+    <path d="M40 40 a20 20 0 0 1 40 0" fill="none" stroke="url(#gObj)" stroke-width="6"/>
+    <path d="M26 44 h68 l8 74 a6 6 0 0 1 -6 7 H24 a6 6 0 0 1 -6 -7 z" fill="url(#gGlass)"/>
+    <rect x="26" y="44" width="68" height="8" fill="#ffffff" opacity="0.25"/>
+    <circle cx="60" cy="82" r="7" fill="#fff" opacity="0.4"/>
+  </symbol>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="VISUAILS home"><span class="brand-word">VIS<span class="u">U</span>AILS</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li class="has-menu">
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Services
+            <svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-menu" role="menu">
+            <a href="catalog.html" role="menuitem"><span class="mi-title">Catalog</span><span class="mi-desc">Clean, consistent product shots — from €19</span></a>
+            <a href="lifestyle.html" role="menuitem"><span class="mi-title">Lifestyle</span><span class="mi-desc">Styled scenes & models — from €35</span></a>
+            <a href="video.html" role="menuitem"><span class="mi-title">Video</span><span class="mi-desc">Short product videos that move</span></a>
+            <a href="models.html" role="menuitem"><span class="mi-title">Models</span><span class="mi-desc">Consistent faces across every visual</span></a>
+            <a href="custom-models.html" role="menuitem" aria-current="page"><span class="mi-title">Custom Models</span><span class="mi-desc">A unique face, exclusively yours</span></a>
+          </div>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="test-sample.html">Test Sample</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="order.html" class="btn btn-primary">Order now</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="mobileNav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="catalog.html">Catalog</a>
+  <a href="lifestyle.html">Lifestyle</a>
+  <a href="video.html">Video</a>
+  <a href="models.html">Models</a>
+  <a href="custom-models.html" aria-current="page">Custom Models</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="test-sample.html">Test Sample</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.8rem">
+    <a href="order.html" class="btn btn-primary btn-block">Order now</a>
+    <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27d%20like%20to%20order%20some%20visuals." class="btn btn-wa btn-block" target="_blank" rel="noopener">Order via WhatsApp</a>
+  </div>
+</div>
+
+<main>
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container two-col" style="align-items:center">
+    <div class="reveal in">
+      <p class="eyebrow-page"><a href="models.html" style="color:inherit">&larr; Models</a></p>
+      <h1 class="display" style="font-size:clamp(2.4rem,5vw,4rem)">A face that exists <em>only</em> for your brand.</h1>
+      <p class="lead" style="margin-top:1.2rem">Continue the identity you already have, or create the one you always wanted. We design a model exclusively for you, then it appears in every visual you order &mdash; this month and next year.</p>
+      <div class="flex" style="margin-top:1.8rem">
+        <a href="order-custom.html" class="btn btn-primary btn-lg">Start your custom model</a>
+        <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27d%20like%20to%20discuss%20a%20custom%20model%20for%20my%20brand." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          Discuss on WhatsApp
+        </a>
+      </div>
+      <div class="trust-row" style="margin-top:2.4rem">
+        <span class="trust-item"><strong>One-time</strong> design fee</span>
+        <span class="trust-item"><strong>Exclusive</strong> to your brand</span>
+        <span class="trust-item"><strong>Locked</strong> forever, reused free</span>
+      </div>
+    </div>
+    <div class="reveal in" data-delay="1">
+      <div class="vis wide" style="--vh:268;border-radius:var(--r-lg);background-image:url('assets/img/custom-models-03.webp')">
+        <div class="vis-glow"></div>
+        <div class="vis-obj" style="width:44%"><svg viewBox="0 0 120 130"><use href="#p-jar"/></svg></div>
+        <div class="vis-floor"></div>
+        <span class="vis-badge">One consistent face, everywhere</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CUSTOM ===== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Why go custom</span>
+      <h2 style="margin-top:1rem">Your model, not <em>a</em> model.</h2>
+      <p>Standard models are shared across brands &mdash; a great starting point, included in every order. A custom model is designed once, for you alone, and never appears anywhere else.</p>
+    </div>
+    <div class="arrow-rows" style="grid-template-columns:repeat(2,1fr)">
+      <div class="arow reveal"><h3>Built from your brief</h3><p>Age, vibe, styling, do's and don'ts &mdash; the model reflects the brand you're building, not a generic library entry.</p></div>
+      <div class="arow reveal" data-delay="1"><h3>Exclusive, by design</h3><p>Once locked, your model is reserved to your brand. No other business can order the same face.</p></div>
+      <div class="arow reveal" data-delay="2"><h3>Consistent, forever</h3><p>The same face, expression range and presence in every catalog, lifestyle and video visual &mdash; order after order, year after year.</p></div>
+      <div class="arow reveal" data-delay="0"><h3>Reused at no extra cost</h3><p>The design fee is one-time. Every order after that runs at the normal per-visual price &mdash; no ongoing model fee.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIRECTIONS GALLERY ===== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">What's possible</span>
+      <h2 style="margin-top:1rem">A few directions to <em>spark ideas.</em></h2>
+      <p>These are illustrative starting points, not a fixed menu &mdash; your custom model can lean anywhere your brand does. Tell us the references and we'll design 2&ndash;3 real directions around them.</p>
+    </div>
+    <div class="grid grid-auto">
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#8b6bff,#b78bff)">E</div>
+        <h3>Editorial minimal</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Restrained studio light, quiet posture, neutral wardrobe — a face that lets the product lead.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#2ec5b6,#7ce0d3)">S</div>
+        <h3>Streetwear energy</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Direct gaze, bold stance, contrast light — built for drops and hype moments.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#ff9d5c,#ffd28e)">Q</div>
+        <h3>Quiet luxury</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Soft neutrals, unhurried posture, refined detail — the vocabulary of premium goods.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#5aa2ff,#8ec5ff)">W</div>
+        <h3>Warm & approachable</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Open expression, natural light, everyday ease — for brands that sell to real life.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#ff6b8a,#ffa9c0)">H</div>
+        <h3>High-fashion editorial</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Sculptural pose, hard shadow, magazine intensity — for brands with an edge.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#ff8f6b,#ffc27e)">R</div>
+        <h3>Retro Americana</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Warm film tones, nostalgic styling, a face that feels like it's always been part of the brand.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#33cc99,#7ee0b8)">C</div>
+        <h3>Coastal & sun-worn</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Sun-bleached warmth, relaxed shoulders, golden-hour ease — built for Dunes-style scenes.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#a05cff,#ff8ed6)">M</div>
+        <h3>Monochrome studio</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Single-tone wardrobe, graphic shadow, a face built to repeat cleanly across a grid.</p>
+      </div>
+      <div class="card model-card reveal">
+        <div class="monogram" style="background:linear-gradient(135deg,#4f8cff,#6be0ff)">B</div>
+        <h3>Bold colour-block</h3>
+        <p style="font-size:.9rem;color:var(--ink-3)">Saturated wardrobe, confident colour pairing, unmistakable at thumbnail size.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REAL EXAMPLES ===== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">What you actually get</span>
+      <h2 style="margin-top:1rem">Real output, not a mockup.</h2>
+      <p>Three finished custom models, generated end-to-end &mdash; this is the level of realism and consistency every custom model ships with.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" style="padding:0;overflow:hidden">
+        <div class="vis square" style="border-radius:0;background-image:url('assets/img/custom-models-01.webp')"><div class="vis-floor"></div><span class="vis-badge">Generated example</span></div>
+      </div>
+      <div class="card reveal" data-delay="1" style="padding:0;overflow:hidden">
+        <div class="vis square" style="border-radius:0;background-image:url('assets/img/custom-models-02.webp')"><div class="vis-floor"></div><span class="vis-badge">Generated example</span></div>
+      </div>
+      <div class="card reveal" data-delay="2" style="padding:0;overflow:hidden">
+        <div class="vis square" style="border-radius:0;background-image:url('assets/img/custom-models-03.webp')"><div class="vis-floor"></div><span class="vis-badge">Generated example</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2>How a custom model comes together</h2>
+      <p>A short, collaborative process &mdash; then your model is locked in for every future order.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-n">01</div><h3>Intake</h3><p>You share references and a brief on the look, age and vibe you're after.</p></div>
+      <div class="step reveal" data-delay="1"><div class="step-n">02</div><h3>2&ndash;3 directions</h3><p>We design a few distinct model directions for you to react to.</p></div>
+      <div class="step reveal" data-delay="2"><div class="step-n">03</div><h3>You choose</h3><p>Pick the face that fits your brand best &mdash; with a round of refinement.</p></div>
+      <div class="step reveal"><div class="step-n">04</div><h3>Locked in</h3><p>We lock the final model so it stays perfectly consistent going forward.</p></div>
+      <div class="step reveal" data-delay="1"><div class="step-n">05</div><h3>Used in every order</h3><p>From then on, your model appears in every visual you order.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU PROVIDE + PRICING ===== -->
+<section class="section-tight">
+  <div class="container two-col">
+    <div class="card reveal">
+      <h3>What you provide</h3>
+      <ul class="checklist" style="margin-top:1.2rem">
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span>A few <strong>references</strong> for the look you have in mind.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span>The <strong>age, vibe and look</strong> that fits your brand.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span>Any <strong>clothing</strong> or styling direction.</span></li>
+        <li><svg viewBox="0 0 24 24" class="i" style="stroke:var(--success)"><path d="M20 6L9 17l-5-5"/></svg><span>Your <strong>do's and don'ts</strong> &mdash; anything to include or avoid.</span></li>
+      </ul>
+    </div>
+    <div class="card reveal" data-delay="1" style="border-color:var(--accent-line)">
+      <h3>Pricing &amp; timing</h3>
+      <p class="measure" style="margin-top:1rem">A custom model is a <strong>one-time design fee</strong>, then it's yours to reuse across every future order at the normal visual price. Because we design the model up front, the <strong>first order has a longer lead time</strong> &mdash; after that, every order runs at the usual speed.</p>
+      <div class="flex" style="margin-top:1.6rem">
+        <a href="order-custom.html" class="btn btn-primary">Start your custom model</a>
+        <a href="pricing.html" class="link-arrow">See pricing <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING CTA ===== -->
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem)">Design the face of <em>your</em> brand.</h2>
+      <p class="lead" style="margin:1.2rem auto 0;text-align:center">Start with a short intake over WhatsApp, or fill in the request form &mdash; we'll take it from there.</p>
+      <div class="flex" style="justify-content:center;margin-top:2rem">
+        <a href="order-custom.html" class="btn btn-primary btn-lg">Start your custom model</a>
+        <a href="models.html" class="btn btn-ghost btn-lg">Browse standard models</a>
+        <a href="https://wa.me/31625436130?text=Hi%20VISUAILS%2C%20I%27d%20like%20to%20discuss%20a%20custom%20model%20for%20my%20brand." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-word">VIS<span class="u">U</span>AILS</span></a>
+        <p>A product-visual studio for modern e-commerce brands. Studio-quality product visuals for brands that would rather grow than book another shoot.</p>
+        <a href="https://wa.me/31625436130" class="btn btn-wa" style="margin-top:1.2rem" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.5-4.5A8.38 8.38 0 0 1 3.5 11 8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="custom-models.html">Custom Models</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:hello@visuails.com">hello@visuails.com</a></li>
+          <li><a href="https://wa.me/31625436130" target="_blank" rel="noopener">+31 6 25436130</a></li>
+          <li class="muted" style="color:var(--ink-3)">Enschede, Netherlands</li>
+          <li class="muted" style="color:var(--ink-3)">Mon–Fri 08:00–20:00 CET<br>Sat–Sun 09:00–20:00 CET</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> VISUAILS · KVK 99742993 · VAT NL005407575B96</span>
+      <span style="display:flex;gap:1.2rem;flex-wrap:wrap">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
