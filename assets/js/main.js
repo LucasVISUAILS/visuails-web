@@ -155,3 +155,58 @@
   /* Footer year */
   var y = document.querySelector("[data-year]"); if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* Persistent conversion bar — orange V mark, appears on scroll, dismissible */
+(function () {
+  var P0 = "M0.0 0.4 57.2 100.0 80.8 43.0 63.5 66.4 29.2 8.8 17.5 1.5Z";
+  var P1 = "M97.9 0.0 91.2 0.2 82.7 2.1 76.2 5.4 71.6 10.0 68.7 16.5 68.1 25.5 69.3 33.4 72.0 41.1 76.8 39.2 82.7 35.5 86.6 31.7 90.0 27.1 94.2 16.7Z";
+  var bar = document.createElement("div");
+  bar.className = "convbar"; bar.setAttribute("role", "complementary"); bar.setAttribute("aria-label", "Quick start");
+  bar.innerHTML =
+    '<span class="cb-dot"><svg viewBox="0 0 97.9 100" aria-hidden="true"><path d="' + P0 + '" fill="#FF5B2E"/><path d="' + P1 + '" fill="#FF5B2E"/></svg></span>' +
+    '<em>See it on your own product — free.</em>' +
+    '<a class="cb-cta" href="test-sample.html">Free test sample</a>' +
+    '<button class="cb-close" type="button" aria-label="Dismiss">&times;</button>';
+  document.body.appendChild(bar);
+  var dismissed = false;
+  bar.querySelector(".cb-close").addEventListener("click", function () { dismissed = true; bar.classList.remove("show"); });
+  function onScroll() { if (!dismissed) bar.classList.toggle("show", window.scrollY > 640); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+})();
+
+/* Pointer-tracking warm glow on hover cards (subtle, desktop only) */
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!window.matchMedia("(hover: hover)").matches) return;
+  document.querySelectorAll(".card-hover").forEach(function (c) {
+    c.addEventListener("pointermove", function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100) + "%");
+      c.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100) + "%");
+    });
+  });
+})();
+
+/* Collage mouse parallax (desktop, motion-safe) */
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!window.matchMedia("(hover: hover)").matches) return;
+  var hero = document.querySelector(".hero-collage");
+  if (!hero) return;
+  var els = hero.querySelectorAll("[data-depth]");
+  var raf = null, tx = 0, ty = 0;
+  hero.addEventListener("pointermove", function (e) {
+    var r = hero.getBoundingClientRect();
+    tx = (e.clientX - r.left) / r.width - 0.5;
+    ty = (e.clientY - r.top) / r.height - 0.5;
+    if (!raf) raf = requestAnimationFrame(apply);
+  });
+  hero.addEventListener("pointerleave", function () { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(apply); });
+  function apply() {
+    raf = null;
+    els.forEach(function (el) {
+      var d = parseFloat(el.getAttribute("data-depth") || "0");
+      el.style.transform = "translate(" + (-tx * d) + "px," + (-ty * d) + "px)";
+    });
+  }
+})();
